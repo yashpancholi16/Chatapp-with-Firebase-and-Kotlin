@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -8,13 +7,21 @@
         android:layout_height="match_parent"
         tools:context=".ui.SearchFragment">
 
-        <TextView
+        <EditText
+            android:id="@+id/searchUsersET"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Search"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:textStyle="bold"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Search users here...">
+        </EditText>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchList"
+            android:layout_below="@+id/searchUsersET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
 
     </RelativeLayout>
 </layout>
